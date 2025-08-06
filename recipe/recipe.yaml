@@ -10,7 +10,7 @@ source:
   sha256: 06fe0c22e3e75274643c017928fbc85e86589bc1acd515d92f98eecd4bbab11b
 
 build:
-  number: 0
+  number: 1
   script: |
     meson setup build -Dbashcompletiondir=$PREFIX/share/bash-completion/completions $MESON_ARGS
     meson compile -C build --verbose
@@ -54,6 +54,10 @@ about:
     tio is a simple TTY terminal I/O application which features a straightforward
     command-line interface to easily connect to TTY devices for basic input/output.
   repository: https://github.com/tio/tio
+
+additional-platforms:
+  - linux-aarch64
+  - osx-arm64
 
 extra:
   recipe-maintainers:
